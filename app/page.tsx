@@ -13,8 +13,8 @@ export interface Member {
 }
 
 export default async function Home() {
-  const members: Member[] = await client.fetch(`
-    *[_type == "member"]{
+  const members: Member[] = await client.fetch(
+    `*[_type == "member"]{
       "id": _id,
       "fullname": fullName,
       "gender": gender,
@@ -23,8 +23,12 @@ export default async function Home() {
       "mid": mid._ref,
       "fid": fid._ref,
       "pids": coalesce(pids[]._ref, [])
+    }`,
+    {},
+    {
+      next: { revalidate: 0 }
     }
-  `);
+  );
 
   console.log('Fetched members:', members);
 
