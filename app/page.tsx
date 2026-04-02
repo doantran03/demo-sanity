@@ -1,16 +1,6 @@
 import { client } from '@/sanity/lib/client';
 import FamilyTreeChart from './components/FamilyTreeChart';
-
-export interface Member {
-  id: string;
-  fullname: string;
-  gender: 'male' | 'female' | 'other';
-  dob?: string;
-  avatar?: string;
-  mid?: string;
-  fid?: string;
-  pids?: string[];
-}
+import { Member } from './types/member';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
