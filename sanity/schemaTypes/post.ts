@@ -17,6 +17,13 @@ export const postType = defineType({
       type: 'text',
       validation: (Rule) => Rule.required().error('Content is required'),
     }),
+    // defineField({
+    //   name: 'content',
+    //   title: 'Content',
+    //   type: 'array',
+    //   of: [{ type: 'block' }],
+    //   validation: (Rule) => Rule.required().error('Content is required'),
+    // }),
     defineField({
       name: 'author',
       title: 'Author',
