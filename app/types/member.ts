@@ -1,6 +1,6 @@
 export interface Member {
   id: string;
-  fullname: string;
+  fullName: string;
   gender: 'male' | 'female' | 'other';
   dob?: string;
   avatar?: string;

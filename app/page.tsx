@@ -26,7 +26,7 @@ export default async function Home() {
   console.log('Fetched members:', members);
 
   return (
-    <main style={{ padding: '20px' }}>
+    <main>
       <h1>Gia phả</h1>
       <div style={{ marginTop: '20px', border: '1px solid #444' }}>
         <FamilyTreeChart data={members} />
